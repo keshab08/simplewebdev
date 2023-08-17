@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type='text/javascript' src='https://www.x3dom.org/download/x3dom.js'></script>
+  <link rel='stylesheet' type='text/css' href='https://www.x3dom.org/download/x3dom.css'/>
+</head>
+<body>
+  <x3d id="myX3D" showStat="false" showLog="false">
+    <scene>
+      <shape>
+        <appearance>
+          <material diffuseColor="1 0 0"/>
+        </appearance>
+        <cylinder id="redCylinder" radius="1" height="2"/>
+      </shape>
+      <transform translation="0 1 0">
+        <shape>
+          <appearance>
+            <material diffuseColor="1 0 0"/>
+          </appearance>
+          <sphere radius="1"/>
+        </shape>
+      </transform>
+      <transform translation="-0.5 -1.4 0">
+        <transform scale="0.4 0.4 0.4">
+          <use href="#redCylinder"/>
+        </transform>
+      </transform>
+      <transform translation="0.5 -1.4 0">
+        <transform scale="0.4 0.4 0.4">
+          <use href="#redCylinder"/>
+        </transform>
+      </transform>
+      <transform translation="0 2 0.5">
+        <transform scale="0.9 0.4 0.4">
+          <shape>
+            <appearance>
+              <material diffuseColor="0 1 1"/>
+            </appearance>
+            <cylinder radius="1" height="2"/>
+          </shape>
+        </transform>
+      </transform>
+    </scene>
+  </x3d>
+</body>
+</html>

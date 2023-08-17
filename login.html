@@ -1,0 +1,80 @@
+ 
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="css/login.css">
+ <link rel="stylesheet" href="auth.js">
+  
+</head>
+<body>
+<div class="header">
+    <h1>ENTER YOUR USERNAME AND PASSWORD</h1>
+</div>
+ 
+
+<form method="post">
+   
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" id="username"   required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" id="password"   required>
+        
+   <button type="submit"  class="btn  "    onclick="auth(event)" >Login</button>
+     
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+    <br>
+    <br>
+    <label>
+        Not a member? <a href="seller-registration.html">SignUp</a>
+        
+
+    </label>
+
+
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+
+ 
+  <!----authorization--> 
+
+  <script>
+    function auth(event){
+      event.preventDefault();
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    
+    if (username === "pant1" && password ==="123"){
+      window.location.replace("addCar.html");
+    
+    } else {
+    
+      alert("Invalid information");
+       
+      return;
+    }
+    
+    }
+    </script>
+  
+ 
+</form>
+
+ 
+
+
+</body>
+</html>
